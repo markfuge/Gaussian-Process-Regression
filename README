@@ -1,0 +1,3 @@
+Mark Fuge (mark.fuge [at] gmail) - 2012
+This code implements Gaussian Process Regression in Python using the NumPy library.
+I made this implementation as part of an assignment for CS 281B Scalable Machine Learning at UC Berkeley; I don't promise anything regarding the speed or accuracy of the code, but maybe someone will find it useful as a reference implementation one day...
