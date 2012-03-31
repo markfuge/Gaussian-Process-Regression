@@ -3,6 +3,7 @@ import pickle
 from numpy import *
 import re
 import random as modrandom
+import os.path
 
 DATA_PATH = ".\\data\\"
 
@@ -56,12 +57,12 @@ def pickle_data(data,name):
     output.close()
 
 def data_exists():
-    return False
+    return os.path.isfile(DATA_PATH+"raw.dat") and os.path.isfile(DATA_PATH+"cooked.dat")
 
 def unpickle_data():
     raw = open(DATA_PATH+"raw.dat",'r')
     cooked = open(DATA_PATH+"cooked.dat",'r')
-    data = [pickle.load(raw),pickle.load(cooked)]
+    data = (pickle.load(raw),pickle.load(cooked))
     raw.close()
     cooked.close()
     return data
